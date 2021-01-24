@@ -1,0 +1,79 @@
+# YAML is a markup language and everything here key and value pair also key, value separated by colon (:) and whaite space sign also string canbe write in double or single quote or without quote.
+
+---
+name: As Md Habibullah. # here name is a key and Habibullah is the value.
+age: 24
+birth: 15-12-1996
+job: Software Developer.
+study: Computer Science & Technology (CST).
+collage: Yunnan University - Information School.
+country: China
+run: true # Boolean value can be ==> on, off, true, false, yes, no
+
+---
+# Object
+microservice:
+  name: As Md Habibullah
+  age: 24
+  birth: 15-12-1996
+  gender: Male
+  job: Software Developer.
+  study: Computer Science & Technology (CST).
+  collage: Yunnan University - Information School.
+  country: China
+---
+# List of object
+microservices:
+  # First object
+  - name: As Md Habibullah
+    age: 24
+    birth: 15-12-1996
+    gender: Male
+    job: Software Developer.
+    study: Computer Science & Technology (CST).
+    collage: Yunnan University - Information School.
+    country: China
+  
+  # Second object
+  - name: Raziya Khatun
+    age: 20
+    birth: 15-12-200
+    gender: Femail
+    job: Software Developer.
+    study: Computer Science & Technology (CST).
+    collage: Bangladesh National University - Information School.
+    country: Bangladesh
+  
+  # Third object
+  - name: Abu Nayeem Md Ahmadullah
+    age: 16
+    birth: 15-12-2006
+    gender: Male
+    job: Student
+    study: Science Depertment
+    collage: Bangladesh Madrasha Education Board (BMEB)
+    country: Bangladesh
+
+---
+# App configaration
+docker_app:
+  - name: docker-container
+    deploy: true # or on or yes
+    versions: [1.0, 1.1, 1.2]
+    engine:
+      name: nginx
+      label:
+        app: nginx
+spect:
+  containers:
+    - name: docker-container
+      image: nginx
+      ports:
+        - containerPort: 85
+      volumeMounts:
+        - name: nginx-vol
+          mountPath: /usr/nginx/html
+    - name: nginx-curl
+      image: curlImage/curl
+      command: ["/bin/bsh"]
+      args: ["-c", "echo hello from test setup"]
