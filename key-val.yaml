@@ -1,0 +1,9 @@
+# YAML is a markup language and everything here key and value pair also key, value separated by : colon and whaite space sign
+
+name: As Md Habibullah. # here name is a key and Habibullah is the value.
+age: 24
+birth: 15-12-1996
+job: Software Developer.
+study: Computer Science & Technology (CST).
+collage: Yunnan University - Information School.
+country: China
